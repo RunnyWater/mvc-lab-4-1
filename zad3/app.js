@@ -20,8 +20,10 @@ app.get('/students-list', (req, res) => {
     res.render('List');
 });
 
-// app.post('/add-student', (req, res) => {
-// });
+app.post('/add-student', (req, res) => {
+    app.post('/add-student', studentsController.addStudent);
+    res.redirect('/success');
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {
@@ -32,5 +34,4 @@ const errorController = require(path.join(__dirname,'./controllers/error'));
 const studentsController = require(path.join(__dirname, './controllers/students'));
 
 app.use(errorController.getNotFoundPage);
-app.post('/add-student', studentsController.getStudentsListPage);
 

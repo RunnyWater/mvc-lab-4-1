@@ -16,9 +16,14 @@ exports.addStudent = (req, res) => {
     code: req.body.code,
     fieldOfStudies: req.body.fieldOfStudies
   };
+
   students.push(newStudent);
   nextId++;
   res.redirect('/success');
+};
+
+exports.getSuccessPage = (req, res) => {
+  res.render('Success');
 };
 
 

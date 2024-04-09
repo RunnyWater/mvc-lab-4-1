@@ -8,6 +8,9 @@ exports.getStudentsListPage = (req, res) => {
   res.render(path.join(viewPath, 'List'), { students: students });
 };
   
+exports.getSuccessPage = (req, res) => {
+  res.render('Success');
+};
 
 let students = [];
 let nextId = 1;
@@ -23,3 +26,4 @@ exports.addStudent = (req, res) => {
   nextId++;
   res.redirect('/success');
 };
+
