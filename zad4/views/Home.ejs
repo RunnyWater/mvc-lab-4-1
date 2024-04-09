@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include( 'partials/head.ejs') %>
+<body>
+    <h1>Add new student</h1>
+    <%- include( 'partials/navigation.ejs') %>
+    <form action="/add-student" method="POST">
+        <input type="text" name="name" placeholder="Full Name">
+        <input type="text" name="code" placeholder="Code">
+        <input type="text" name="fieldOfStudies" placeholder="Field of Studies">
+        <button type="submit">Add student</button>
+    </form>
+</body>
+</html>
