@@ -12,7 +12,7 @@ let nextId = 1;
 exports.addStudent = (req, res) => {
   const newStudent = {
     id: nextId,
-    fullName: req.body.fullName,
+    name: req.body.name,
     code: req.body.code,
     fieldOfStudies: req.body.fieldOfStudies
   };
